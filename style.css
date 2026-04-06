@@ -71,7 +71,7 @@ body {
     transition: 0.25s ease;
 }
 
-/* === HOVER MENU BUTTONS === */
+/* === HOVER КНОПКИ МЕНЮ === */
 .menu a:hover {
     background: #0a6fd1;
     transform: translateY(-3px);
@@ -486,8 +486,7 @@ body {
     margin-top: 10px;
 }
 
-/* ===== CSS АНИМАЦИИ КНОПОК (Практическая работа 12) ===== */
-/* Только для страницы подписок */
+/* ===== CSS АНИМАЦИИ КНОПОК  ===== */
 
 /* Базовый стиль кнопки подписки */
 .subscribe-btn {
