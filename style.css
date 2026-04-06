@@ -1,0 +1,637 @@
+/* ===== ШРИФТ GTA RUSSIAN ===== */
+@font-face {
+    font-family: "GTA Russian";
+    src: url("https://cdn.jsdelivr.net/gh/furude-rika/fonts/GTA_Russian/GTA_Russian.ttf") format("truetype");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "GTA Russian", sans-serif;
+}
+
+body {
+    background: #0b8dff;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.header {
+    width: 100%;
+    max-width: 1920px;
+    background: white;
+    padding: 10px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    border-bottom: 3px solid #e3e3e3;
+}
+
+.logo-img {
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.menu {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 28px;
+
+    background: #118cff;
+    border-radius: 35px;
+    font-size: 40px;
+
+    border: 2px solid rgba(255,255,255,0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+
+    white-space: nowrap;
+    text-align: center;
+
+    min-width: 220px;
+    transition: 0.25s ease;
+}
+
+/* === HOVER MENU BUTTONS === */
+.menu a:hover {
+    background: #0a6fd1;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
+}
+
+.avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid #118cff;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.hero {
+    width: 100%;
+    max-width: 1920px;
+    height: 509px;
+    background: url("image/dOEP-8DLcJo.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; 
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 120px;
+    text-shadow: 3px 3px 10px black;
+}
+
+.watch-btn {
+    padding: 18px 35px;
+    background: #118cff;
+    border: none;
+    border-radius: 35px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s ease;
+    
+    
+    position: absolute; 
+    bottom: 30px; 
+    right: 30px;  
+    z-index: 5;   
+}
+
+
+.watch-btn:hover {
+    background: #0a6fd1;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
+}
+
+
+.movie-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.section-title {
+    font-size: 70px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.movie-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.mainmovie-card {
+    margin-top: 20px;
+    object-fit: cover;
+    width: 434.79px;
+    height: 315.48px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.movie-card {
+    width: 259.33px;
+    height: 398.05px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s ease;
+}
+
+.movie-card:hover,
+.mainmovie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card img,
+.mainmovie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    width: 100%;
+    max-width: 1920px;
+    background: white;
+    padding: 10px 40px;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.circle {
+    width: 58px;
+    height: 59.32px;
+    background: #118cff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    width: 85%;
+    margin: 30px auto;
+}
+
+.category img {
+    width: 100%;
+    height: 220px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid white;
+    transition: 0.25s;
+}
+
+.category img:hover {
+    transform: scale(1.05);
+}
+
+
+/* ===== GRID ПАНЕЛЬ ФИЛЬТРОВ ===== */
+.filter-bar {
+    background: white;
+    color: black;
+    width: 85%;
+    margin: 20px auto 40px;
+    padding: 20px;
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.filter-bar select,
+.filter-bar input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #118cff;
+    font-size: 16px;
+}
+
+
+/* ===== GRID ТОВАРОВ ===== */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+    width: 85%;
+    margin: 0 auto 60px;
+}
+
+.card {
+    background: white;
+    color: black;
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: 0.25s ease;
+
+    display: grid;
+    grid-template-rows: 250px auto auto auto;
+    gap: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.card .watch-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #118cff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.25s;
+}
+
+.card .watch-btn:hover {
+    background: #0a6fd1;
+    transform: translateY(-2px);
+}
+
+/* ===== ФИЛЬТР-ПАНЕЛЬ – GRID ===== */
+
+/* ===== ФИЛЬТР МЕНЮ (GRID) ===== */
+
+.filter-panel {
+    width: 90%;
+    background: white;
+    padding: 35px 40px;
+    margin: 30px auto 50px;
+    border-radius: 30px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+
+    align-items: center;
+    box-shadow: 0px 8px 18px rgba(0,0,0,0.25);
+}
+
+/* ЗАГОЛОВОК */
+.filter-title {
+    grid-column: 1 / -1;
+    font-size: 48px;
+    font-weight: bold;
+    color: #0078ff;
+    text-align: left;
+}
+
+/* ПОЛЯ ЦЕНЫ (GRID внутри GRID) */
+.price-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.price-inputs input {
+    background: #0b8dff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 3px solid white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.price-inputs input::placeholder {
+    color: rgba(255,255,255,0.75);
+}
+
+/* СИНИЕ SELECT-КНОПКИ */
+.filter-select {
+    background: #0b8dff;
+    color: white;
+
+    padding: 18px 25px;
+    font-size: 24px;
+
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+
+    border: 3px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' height='20' width='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,0 20,0 10,12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    padding-right: 45px;
+}
+
+.filter-select:hover {
+    background: #0a6fd1;
+    transform: translateY(-2px);
+}
+/* ===== СТРАНИЦА ПОДПИСОК ===== */
+.subscriptions-section {
+    width: 100%;
+    max-width: 1920px;
+    padding: 60px 20px 80px;
+    background: #0b8dff;
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+}
+
+.subscription-card {
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.subscription-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.subscription-card.featured {
+    transform: scale(1.05);
+}
+
+.subscription-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 30px 30px 0 0;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s ease;
+}
+
+.subscription-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px 20px 30px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 48px;
+    color: #0b8dff;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.card-description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.card-price {
+    font-size: 42px;
+    color: #0b8dff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== CSS АНИМАЦИИ КНОПОК (Практическая работа 12) ===== */
+/* Только для страницы подписок */
+
+/* Базовый стиль кнопки подписки */
+.subscribe-btn {
+    padding: 15px 35px;
+    background: #118cff;
+    border: none;
+    border-radius: 35px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 15px 0;
+    font-family: "GTA Russian", sans-serif;
+}
+
+/* Анимация jelly (эффект желе) */
+.subscribe-btn.btn-jelly:hover {
+    animation: jelly 0.5s;
+}
+
+/* Анимация pulse (пульсация) */
+.subscribe-btn.btn-pulse:hover {
+    animation: pulse 1s;
+}
+
+/* Анимация fill-up (заполнение сверху) */
+.subscribe-btn.btn-fill-up {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.subscribe-btn.btn-fill-up::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a6fd1;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.subscribe-btn.btn-fill-up:hover::before {
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+.subscribe-btn:hover {
+    background: #0a6fd1;
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== KEYFRAMES ДЛЯ АНИМАЦИЙ ===== */
+@keyframes jelly {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        box-shadow: 0 0 0 0 rgba(11, 141, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 18px rgba(11, 141, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(11, 141, 255, 0);
+    }
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 992px) {
+    .subscription-card.featured {
+        transform: scale(1);
+    }
+    
+    .subscription-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    .card-title {
+        font-size: 36px;
+    }
+    
+    .card-price {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .subscriptions-section {
+        padding: 40px 15px;
+    }
+    
+    .card-title {
+        font-size: 32px;
+    }
+    
+    .card-price {
+        font-size: 28px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+    }
+    
+    .subscribe-btn {
+        font-size: 20px;
+        padding: 12px 25px;
+    }
+}
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.social-icon:hover {
+    background: #0a6fd1;
+    transform: translateY(-3px);
+}
+
+.social-icon.telegram::before { content: "t"; font-size: 28px; color: white; font-weight: bold; }
+.social-icon.youtube::before { content: "▶"; font-size: 24px; color: white; }
+.social-icon.facebook::before { content: "f"; font-size: 28px; color: white; font-weight: bold; }
+.social-icon.twitter::before { content: "🐦"; font-size: 24px; }
